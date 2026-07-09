@@ -4,450 +4,65 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tianyujun (Lucy) Lu — PhD Candidate, UBC Sauder School of Business</title>
-<meta name="description" content="Tianyujun (Lucy) Lu, PhD Candidate in Marketing and Behavioural Science, University of British Columbia. Research on consumer behavior, stigma, and identity signaling.">
+<meta name="description" content="Tianyujun (Lucy) Lu, PhD Candidate in Marketing and Behavioural Science, University of British Columbia.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <style>
-  :root{
-    --ubc-blue: #002145;
-    --ubc-blue-mid: #0C2D57;
-    --ubc-blue-accent: #0F5FA6;
-    --ubc-gold: #FDB913;
-    --paper: #FAF8F3;
-    --panel: #FFFFFF;
-    --ink: #1C1C1E;
-    --ink-soft: #55575c;
-    --rule: #DDD7C8;
-    --rule-blue: rgba(0,33,69,0.12);
-    --serif: "Source Serif 4", Georgia, serif;
-    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --maxw: 880px;
-  }
-
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:var(--sans);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-
-  a{color:var(--ubc-blue-accent);}
-  a:hover{color:var(--ubc-blue);}
-
-  ::selection{ background: rgba(253,185,19,0.35); }
-
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    *{transition:none !important; animation:none !important;}
-  }
-
-  /* ---------- NAV ---------- */
-  .nav{
-    position:sticky; top:0; z-index:50;
-    background:rgba(250,248,243,0.92);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--rule);
-  }
-  .nav-inner{
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding:14px 24px;
+  body{ height:100vh; overflow:hidden; }
+  main.home{
+    flex:1;
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:10px;
-  }
-  .nav-name{
-    font-family:var(--serif);
-    font-weight:600;
-    font-size:1.05rem;
-    color:var(--ubc-blue);
-    text-decoration:none;
-    letter-spacing:0.01em;
-  }
-  .nav-links{
-    display:flex;
-    gap:22px;
-    list-style:none;
-    margin:0; padding:0;
-    flex-wrap:wrap;
-  }
-  .nav-links a{
-    color:var(--ink-soft);
-    text-decoration:none;
-    font-size:0.88rem;
-    font-weight:500;
-    letter-spacing:0.03em;
-    text-transform:uppercase;
-    position:relative;
-    padding-bottom:3px;
-    border-bottom:2px solid transparent;
-    transition:border-color .15s ease, color .15s ease;
-  }
-  .nav-links a:hover{
-    color:var(--ubc-blue);
-    border-bottom-color:var(--ubc-gold);
-  }
-
-  /* ---------- HERO ---------- */
-  .hero{
-    max-width:var(--maxw);
+    max-width:980px;
     margin:0 auto;
-    padding:64px 24px 40px;
-    display:flex;
-    gap:40px;
-    align-items:flex-start;
+    padding:0 32px;
+    width:100%;
+    gap:56px;
   }
-  .hero-text{flex:1 1 420px; min-width:280px;}
-  .eyebrow{
-    text-transform:uppercase;
-    letter-spacing:0.14em;
-    font-size:0.76rem;
-    font-weight:600;
-    color:var(--ubc-blue-accent);
-    margin:0 0 14px;
-  }
-  .eyebrow::before{
-    content:"";
-    display:inline-block;
-    width:22px; height:2px;
-    background:var(--ubc-gold);
-    margin-right:10px;
-    vertical-align:middle;
-  }
-  h1.name{
-    font-family:var(--serif);
-    font-size:clamp(2.1rem, 5vw, 3rem);
-    line-height:1.08;
-    margin:0 0 10px;
-    color:var(--ubc-blue);
-    font-weight:600;
-  }
-  .title-line{
-    font-size:1.02rem;
-    color:var(--ink-soft);
-    margin:0 0 22px;
-    max-width:46ch;
-  }
-  .hero-blurb{
-    font-size:1rem;
-    color:var(--ink);
-    max-width:56ch;
-    margin:0 0 24px;
-  }
-  .hero-links{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-  }
-  .pill{
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    padding:8px 16px;
-    border-radius:999px;
-    font-size:0.85rem;
-    font-weight:600;
-    text-decoration:none;
-    border:1px solid var(--rule-blue);
-    color:var(--ubc-blue);
-    background:var(--panel);
-    transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
-  }
-  .pill:hover{
-    background:var(--ubc-blue);
-    color:#fff;
-    transform:translateY(-1px);
-    box-shadow:0 4px 14px rgba(0,33,69,0.18);
-  }
-  .pill.solid{
-    background:var(--ubc-blue);
-    color:#fff;
-    border-color:var(--ubc-blue);
-  }
-  .pill.solid:hover{ background:var(--ubc-blue-mid); }
-  .pill.gold{
-    background:var(--ubc-gold);
-    border-color:var(--ubc-gold);
-    color:var(--ubc-blue);
-  }
-  .pill.gold:hover{
-    background:#e5a80f;
-    color:var(--ubc-blue);
-  }
-
-  .headshot-wrap{
-    flex:0 0 190px;
-    width:190px; height:190px;
-    border-radius:14px;
-    overflow:hidden;
-    background:linear-gradient(155deg, var(--ubc-blue) 0%, var(--ubc-blue-accent) 100%);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-  }
-  .headshot-wrap img{
-    width:100%; height:100%; object-fit:cover; display:block;
-  }
-  .headshot-wrap::after{
-    content:"";
-    position:absolute;
-    bottom:0; left:0; right:0;
-    height:5px;
-    background:var(--ubc-gold);
-  }
-
-  /* ---------- SECTION SHELL ---------- */
-  section{
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding:38px 24px;
-  }
-  .section-title{
-    display:flex;
-    align-items:baseline;
-    gap:14px;
-    margin:0 0 22px;
-  }
-  .section-title .num{
-    font-family:var(--serif);
-    font-size:0.85rem;
-    color:var(--ubc-gold);
-    font-weight:700;
-    letter-spacing:0.05em;
-  }
-  .section-title h2{
-    font-family:var(--serif);
-    font-size:1.5rem;
-    color:var(--ubc-blue);
-    margin:0;
-    font-weight:600;
-  }
-  .rule{
-    border:none;
-    border-top:1px solid var(--rule);
-    margin:0;
-  }
-
-  /* ---------- JOB MARKET PAPER (signature block) ---------- */
-  .jmp{
-    background:var(--panel);
-    border:1px solid var(--rule-blue);
+  .home-photo{
+    flex:0 0 300px;
+    width:300px;
     border-radius:16px;
-    padding:34px 32px;
-    position:relative;
     overflow:hidden;
+    box-shadow:0 18px 40px rgba(0,33,69,0.16);
   }
-  .jmp::before{
-    content:"";
-    position:absolute;
-    top:0; left:0; bottom:0;
-    width:5px;
-    background:linear-gradient(180deg, var(--ubc-gold), var(--ubc-blue-accent));
-  }
-  .jmp-tag{
-    display:inline-block;
-    font-size:0.72rem;
-    font-weight:700;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--ubc-blue);
-    background:rgba(253,185,19,0.28);
-    padding:4px 10px;
-    border-radius:6px;
-    margin-bottom:14px;
-  }
-  .jmp h3{
+  .home-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .home-text{ flex:1 1 480px; min-width:0; }
+  .home-text .eyebrow{margin-bottom:14px;}
+  .home-text h1{
     font-family:var(--serif);
-    font-size:1.4rem;
-    color:var(--ubc-blue);
-    margin:0 0 10px;
-    line-height:1.3;
-  }
-  .jmp .authors{
-    font-size:0.92rem;
-    color:var(--ink-soft);
-    margin:0 0 4px;
-  }
-  .jmp .status{
-    font-size:0.86rem;
-    color:var(--ubc-blue-accent);
-    font-weight:600;
-    margin:0 0 18px;
-  }
-  .jmp p.abstract{
-    font-size:0.97rem;
-    color:var(--ink);
-    margin:0 0 18px;
-  }
-
-  /* ---------- PUBLICATION LIST ---------- */
-  .pub{
-    padding:18px 0;
-    border-bottom:1px solid var(--rule);
-    display:flex;
-    gap:18px;
-    align-items:flex-start;
-  }
-  .pub:last-child{border-bottom:none;}
-  .pub-idx{
-    font-family:var(--serif);
-    font-size:0.85rem;
-    color:var(--rule);
-    font-weight:700;
-    flex:0 0 26px;
-    padding-top:2px;
-  }
-  .pub-body p{margin:0 0 6px; font-size:0.95rem;}
-  .pub-title{font-weight:600; color:var(--ink);}
-  .status-tag{
-    display:inline-block;
-    font-size:0.72rem;
-    font-weight:700;
-    letter-spacing:0.03em;
-    text-transform:uppercase;
-    padding:3px 9px;
-    border-radius:5px;
-    background:rgba(15,95,166,0.09);
-    color:var(--ubc-blue-accent);
-  }
-  .status-tag.published{
-    background:rgba(15,95,166,0.14);
-    color:var(--ubc-blue);
-  }
-
-  /* ---------- TWO COLUMN ---------- */
-  .two-col{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:36px;
-  }
-  @media (max-width:680px){
-    .two-col{grid-template-columns:1fr;}
-    .hero{flex-direction:column-reverse;}
-    .headshot-wrap{width:140px;height:140px;}
-  }
-  .two-col h4{
-    font-family:var(--serif);
-    font-size:1.05rem;
-    color:var(--ubc-blue);
-    margin:0 0 12px;
-  }
-  ul.plain{
-    list-style:none;
-    margin:0; padding:0;
-  }
-  ul.plain li{
-    font-size:0.92rem;
-    padding:8px 0;
-    border-bottom:1px solid var(--rule);
-    color:var(--ink);
-  }
-  ul.plain li:last-child{border-bottom:none;}
-  ul.plain li .yr{
-    display:block;
-    font-size:0.78rem;
-    color:var(--ink-soft);
-    margin-top:2px;
-  }
-
-  /* ---------- TEACHING ---------- */
-  .teach-card{
-    background:var(--panel);
-    border:1px solid var(--rule-blue);
-    border-radius:12px;
-    padding:22px 24px;
-  }
-  .teach-card h4{
-    font-family:var(--serif);
+    font-size:clamp(1.7rem, 3.4vw, 2.3rem);
     color:var(--ubc-blue);
     margin:0 0 6px;
-    font-size:1.05rem;
-  }
-  .eval{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    margin-top:12px;
-    font-size:0.88rem;
-    color:var(--ubc-blue-accent);
     font-weight:600;
+    line-height:1.15;
   }
-  .eval .bar{
-    width:120px; height:6px;
-    background:var(--rule);
-    border-radius:4px;
-    overflow:hidden;
-  }
-  .eval .fill{
-    height:100%;
-    background:var(--ubc-gold);
-    width:94%;
-  }
-
-  /* ---------- CONTACT / FOOTER ---------- */
-  .contact-block{
-    background:var(--ubc-blue);
-    color:#fff;
-    border-radius:16px;
-    padding:38px 32px;
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:24px;
-  }
-  .contact-block h2{
-    font-family:var(--serif);
-    font-size:1.5rem;
-    margin:0 0 8px;
-    color:#fff;
-  }
-  .contact-block p{
-    color:rgba(255,255,255,0.78);
+  .home-text .role{
+    color:var(--ink-soft);
+    font-size:0.98rem;
     margin:0 0 18px;
-    max-width:40ch;
   }
-  .contact-block .pill{
-    background:rgba(255,255,255,0.08);
-    border-color:rgba(255,255,255,0.25);
-    color:#fff;
+  .home-text p{
+    font-size:0.92rem;
+    margin:0 0 12px;
+    color:var(--ink);
   }
-  .contact-block .pill:hover{
-    background:var(--ubc-gold);
-    color:var(--ubc-blue);
-  }
-  .contact-links{display:flex; flex-direction:column; gap:10px; min-width:220px;}
-  .contact-links a{
-    color:#fff;
-    text-decoration:none;
-    font-size:0.94rem;
-    border-bottom:1px solid rgba(255,255,255,0.25);
-    padding-bottom:8px;
-  }
-  .contact-links a:hover{ border-color:var(--ubc-gold); color:var(--ubc-gold); }
-
-  footer{
-    text-align:center;
-    padding:28px 24px 50px;
-    font-size:0.8rem;
-    color:var(--ink-soft);
+  .home-text .contact-line{
+    margin-top:16px;
+    font-size:0.92rem;
   }
 
-  .note{
-    font-size:0.82rem;
-    color:var(--ink-soft);
-    background:rgba(15,95,166,0.06);
-    border:1px dashed var(--rule-blue);
-    border-radius:8px;
-    padding:10px 14px;
-    margin-top:10px;
+  /* allow scrolling gracefully on small screens instead of clipping content */
+  @media (max-height:760px), (max-width:860px){
+    body{ height:auto; overflow:auto; }
+    main.home{
+      flex-direction:column;
+      align-items:flex-start;
+      padding:48px 32px 64px;
+    }
+    .home-photo{ width:220px; flex-basis:220px; }
   }
 </style>
 </head>
@@ -455,252 +70,34 @@
 
 <nav class="nav">
   <div class="nav-inner">
-    <a class="nav-name" href="#top">Tianyujun (Lucy) Lu</a>
+    <span class="nav-name">Tianyujun (Lucy) Lu</span>
     <ul class="nav-links">
-      <li><a href="#research">Research</a></li>
-      <li><a href="#jmp">Job Market Paper</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#teaching">Teaching</a></li>
-      <li><a href="#cv">CV</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
     </ul>
   </div>
 </nav>
 
-<div id="top"></div>
-
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-text">
+<main class="home">
+  <div class="home-photo">
+    <img src="headshot_large.jpg" alt="Portrait of Tianyujun (Lucy) Lu">
+  </div>
+  <div class="home-text">
     <p class="eyebrow">Job Market Candidate 2026&ndash;27</p>
-    <h1 class="name">Tianyujun (Lucy) Lu</h1>
-    <p class="title-line">PhD Candidate, Marketing &amp; Behavioural Science<br>Sauder School of Business, University of British Columbia</p>
-    <p class="hero-blurb">
-      I study consumer behavior at the intersection of stigma, identity, and social judgment &mdash;
-      examining when messages meant to signal inclusivity or virtue backfire for brands and individuals.
-      My dissertation, <em>Essays on Stigma Exploitation</em>, uses experiments and field data to show how
-      audiences detect and penalize strategic identity signaling.
-    </p>
-    <div class="hero-links">
-      <a class="pill solid" href="#jmp">Job Market Paper</a>
-      <a class="pill gold" href="#cv">Download CV</a>
-      <a class="pill" href="mailto:lucy.lu@sauder.ubc.ca">Email</a>
-      <a class="pill" href="#" title="Add your Google Scholar link">Google Scholar</a>
-    </div>
+    <h1>Tianyujun (Lucy) Lu</h1>
+    <p class="role">PhD Candidate, Marketing &amp; Behavioural Science &middot; Sauder School of Business, University of British Columbia</p>
+
+    <p>I am a PhD candidate in Marketing and Behavioural Science at the Sauder Business School, University of British Columbia. I am currently on the 2026&ndash;2027 job market.</p>
+
+    <p>My research examines how consumers and decision-makers interpret EDI-related identity messages, representations, and signals in consumer, marketplace, and evaluative contexts. I study how brands, organizations, and individuals communicate about identity, inclusion, and social issues, and how these communications shape judgments of authenticity, motive, fairness, and moral character. I use a multi-method approach comprising online experiments, social media field data, online simulation, archival analysis, text analysis, scale development, and incentive-compatible choice designs. My overarching goal is to uncover the unintended consequences and hidden costs of EDI-related communications, and to provide insight into how such signals can be communicated and interpreted more carefully.</p>
+
+    <p>I am originally from Guiyang, China. I hold a bachelor&rsquo;s degree in Marketing and Accounting from Boston College. Before my PhD, I worked as an auditor at Deloitte for two years. In addition to research and teaching, I&rsquo;m also passionate about music, livehouse, cooking, and of course my two cats.</p>
+
+    <p class="contact-line">You can reach me via email at <a href="mailto:lucy.lu@sauder.ubc.ca">lucy.lu@sauder.ubc.ca</a></p>
   </div>
-  <div class="headshot-wrap">
-    <img src="headshot.jpg" alt="Portrait of Tianyujun (Lucy) Lu">
-  </div>
-</header>
-
-<hr class="rule">
-
-<!-- RESEARCH -->
-<section id="research">
-  <div class="section-title"><span class="num">01</span><h2>Research</h2></div>
-  <p>
-    My work sits in consumer behavior and social judgment, asking how people evaluate brands and individuals
-    who publicly signal virtue, identity, or inclusivity &mdash; and when those signals are read as sincere versus
-    strategic. I combine lab and online experiments with archival and field data, drawing on theories of
-    stigma, impression management, and moral character judgment.
-  </p>
-  <div class="note">
-    Placeholder: add 2&ndash;3 sentences here on the broader contribution of your research program &mdash;
-    what question ties your papers together, and why it matters to marketing scholars and practitioners.
-  </div>
-</section>
-
-<hr class="rule">
-
-<!-- JOB MARKET PAPER -->
-<section id="jmp">
-  <div class="section-title"><span class="num">02</span><h2>Job Market Paper</h2></div>
-  <div class="jmp">
-    <span class="jmp-tag">Dissertation Essay 1</span>
-    <h3>Body-Positive Messaging Backfires for Indulgent Food Brands</h3>
-    <p class="authors">Tianyujun Lu, Yann Cornil, and Darren W. Dahl</p>
-    <p class="status">Under 1st round review at <em>Journal of Consumer Research</em></p>
-    <p class="abstract">
-      Body-positive messaging is increasingly adopted by brands, often aiming to signal inclusivity, warmth,
-      and social awareness. This research identifies an important boundary condition: such messaging can
-      backfire when adopted by indulgent food brands. Across four experiments, an online simulation, and an
-      archival field study, consumers respond less favorably when indulgent food brands, compared with healthy
-      food or non-food brands, engage in weight-related body-positive messaging. This backlash emerges in
-      brand attitudes, incentive-compatible product choice, and social media responses. The effect is specific
-      to weight-related forms of body positivity and does not generalize to non-weight-related forms, such as
-      skin- or disability-related body-positive messaging. The backlash is driven by two related inferences by
-      consumers: the perceived insincerity of the brand, as well as its perceived Machiavellianism &mdash; a belief
-      that the brand is strategically exploiting a social movement while deflecting responsibility for
-      weight-related concerns associated with its products.
-    </p>
-    <div class="hero-links">
-      <a class="pill" href="#" title="Add link to paper PDF">Paper (PDF)</a>
-      <a class="pill" href="mailto:lucy.lu@sauder.ubc.ca">Request draft</a>
-    </div>
-  </div>
-</section>
-
-<hr class="rule">
-
-<!-- PUBLICATIONS -->
-<section id="publications">
-  <div class="section-title"><span class="num">03</span><h2>Publications &amp; Working Papers</h2></div>
-
-  <div class="pub">
-    <div class="pub-idx">01</div>
-    <div class="pub-body">
-      <p class="pub-title">The Reputational Consequences of Victim Signaling</p>
-      <p>Karl Aquino, Stefan Thau, Maja Graso, Cory Clark, Constantin Lagios, Simon Lloyd D. Restubog, and Tianyujun Lu (2026)</p>
-      <p><span class="status-tag published">Published</span> &nbsp;<em>Personality and Individual Differences</em> &middot;
-      <a href="https://doi.org/10.1016/j.paid.2025.113515">doi.org/10.1016/j.paid.2025.113515</a></p>
-    </div>
-  </div>
-
-  <div class="pub">
-    <div class="pub-idx">02</div>
-    <div class="pub-body">
-      <p class="pub-title">How Identity Signaling Can Backfire in Leadership Selection</p>
-      <p>Tianyujun Lu, Karl Aquino, Adam A. Kay, and JoAndrea Hoegg &middot; <em>Dissertation Essay 2</em></p>
-      <p><span class="status-tag">Invited for revision</span> &nbsp;2nd round review at <em>Organizational Behavior and Human Decision Processes</em></p>
-    </div>
-  </div>
-
-  <div class="pub">
-    <div class="pub-idx">03</div>
-    <div class="pub-body">
-      <p class="pub-title">Body-Positive Messaging Backfires for Indulgent Food Brands</p>
-      <p>Tianyujun Lu, Yann Cornil, and Darren W. Dahl &middot; <em>Dissertation Essay 1 &mdash; Job Market Paper</em></p>
-      <p><span class="status-tag">Under 1st round review</span> &nbsp;<em>Journal of Consumer Research</em></p>
-    </div>
-  </div>
-
-  <div class="pub">
-    <div class="pub-idx">04</div>
-    <div class="pub-body">
-      <p class="pub-title">Selective Diversity: Fulfilling Gender Quotas While Neglecting Racial Diversity in Higher- vs. Mid-Level Leadership Positions</p>
-      <p>Hsuan-Che (Brad) Huang, Huan You, Tianyujun Lu, Maja Graso, Luke Zhu, and Karl Aquino</p>
-      <p><span class="status-tag">Under 1st round review</span> &nbsp;<em>Organization Science</em></p>
-    </div>
-  </div>
-
-  <div class="pub">
-    <div class="pub-idx">05</div>
-    <div class="pub-body">
-      <p class="pub-title">Age Bias in Consumer Reactions to Inclusive AI-Generated Contents</p>
-      <p>Tianyujun Lu, Jen Park, and Noah Castelo</p>
-      <p><span class="status-tag">Working paper</span> &nbsp;4 studies completed &middot; data collection in progress</p>
-    </div>
-  </div>
-
-  <div class="pub">
-    <div class="pub-idx">06</div>
-    <div class="pub-body">
-      <p class="pub-title">Partial Body Ownership: Scale Development and Cross-Cultural Evidence</p>
-      <p>Brent McFerran, Karl Aquino, and Tianyujun Lu</p>
-      <p><span class="status-tag">Working paper</span> &nbsp;Data collection in progress</p>
-    </div>
-  </div>
-
-  <div class="pub">
-    <div class="pub-idx">07</div>
-    <div class="pub-body">
-      <p class="pub-title">Brand Status and Cultural Appropriation</p>
-      <p>Tianyujun Lu, Yann Cornil, and Aradhna Krishna</p>
-      <p><span class="status-tag">Working paper</span> &nbsp;Data collection in progress</p>
-    </div>
-  </div>
-</section>
-
-<hr class="rule">
-
-<!-- PRESENTATIONS + AWARDS -->
-<section>
-  <div class="two-col">
-    <div>
-      <h4>Conference Presentations</h4>
-      <ul class="plain">
-        <li>Association for Consumer Research, Chicago, IL*
-          <span class="yr">September 2026 &middot; &ldquo;Body Positivity Messaging Backfires for Indulgent Food Brands&rdquo;</span>
-        </li>
-        <li>UBC&ndash;UWashington Conference, Seattle, WA*
-          <span class="yr">April 2026 &middot; &ldquo;Body Positivity Messaging Backfires for Indulgent Food Brands&rdquo;</span>
-        </li>
-      </ul>
-      <p class="note">* denotes presenting author</p>
-    </div>
-    <div>
-      <h4>Honors &amp; Awards</h4>
-      <ul class="plain">
-        <li>President&rsquo;s Academic Excellence Initiative PhD Award <span class="yr">2021&ndash;2026</span></li>
-        <li>Dean Earle D. MacPhee Memorial Fellowship in Commerce and Business Administration <span class="yr">2021&ndash;2026</span></li>
-        <li>SMEI Charles Weinberg Research Award <span class="yr">2021&ndash;2026</span></li>
-        <li>UBC Sauder EDI Catalyst Grant <span class="yr">2025</span></li>
-        <li>Sauder Exploratory Grant <span class="yr">2022</span></li>
-        <li>Cum Laude &amp; Dean&rsquo;s List, Boston College <span class="yr">2015</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<hr class="rule">
-
-<!-- TEACHING -->
-<section id="teaching">
-  <div class="section-title"><span class="num">04</span><h2>Teaching</h2></div>
-  <div class="teach-card">
-    <h4>Consumer Behaviour &mdash; COMM 362 (Undergraduate)</h4>
-    <p>Instructor of Record, University of British Columbia &middot; Spring 2024</p>
-    <div class="eval">
-      Teaching evaluation average: 4.7 / 5.0
-      <span class="bar"><span class="fill"></span></span>
-    </div>
-  </div>
-</section>
-
-<hr class="rule">
-
-<!-- SERVICE -->
-<section>
-  <div class="section-title"><span class="num">05</span><h2>Service</h2></div>
-  <ul class="plain">
-    <li>Conference Reviewer, Society for Consumer Psychology <span class="yr">2024&ndash;2025</span></li>
-    <li>UBC Marketing &amp; Behavioural Science Brown Bag Workshop Manager <span class="yr">2023</span></li>
-    <li>UBC Sauder Women Scholars PhD Student Society <span class="yr">2023&ndash;2024</span></li>
-    <li>UBC Marketing Behavioural Student Subject Pool Manager <span class="yr">2023&ndash;2024</span></li>
-  </ul>
-</section>
-
-<hr class="rule">
-
-<!-- CV -->
-<section id="cv">
-  <div class="section-title"><span class="num">06</span><h2>Curriculum Vitae</h2></div>
-  <p>Education: Ph.D., Marketing &amp; Behavioural Science, University of British Columbia (expected 2027) &middot; B.S., Marketing &amp; Accounting, Boston College (2019).</p>
-  <p>Prior experience: Audit Senior, Deloitte &amp; Touche LLP (2019&ndash;2021).</p>
-  <a class="pill solid" href="CV_Tianyujun_Lu.pdf">Download Full CV (PDF) &rarr;</a>
-  <p class="note">Placeholder link &mdash; export the CV as a PDF, name it <code>CV_Tianyujun_Lu.pdf</code>, and place it in the same folder as this page.</p>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-block">
-    <div>
-      <h2>Get in touch</h2>
-      <p>Happy to share full papers, teaching materials, or talk about research fit &mdash; feel free to reach out by email.</p>
-      <a class="pill gold" href="mailto:lucy.lu@sauder.ubc.ca">lucy.lu@sauder.ubc.ca</a>
-    </div>
-    <div class="contact-links">
-      <a href="tel:+17786811821">(+1) 778-681-1821</a>
-      <a href="#">Google Scholar &rarr;</a>
-      <a href="#">LinkedIn &rarr;</a>
-      <a href="https://www.sauder.ubc.ca/" target="_blank" rel="noopener">Sauder School of Business &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  &copy; 2026 Tianyujun Lu. Built with UBC Blue &amp; Gold.
-</footer>
+</main>
 
 </body>
 </html>
