@@ -10,59 +10,43 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
-  body{ height:100vh; overflow:hidden; }
+  .nav-name{
+    font-size:1.3rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    font-weight:700;
+  }
   main.home{
     flex:1;
     display:flex;
-    align-items:center;
-    max-width:980px;
+    align-items:flex-start;
+    max-width:1180px;
     margin:0 auto;
-    padding:0 32px;
+    padding:56px 32px 80px;
     width:100%;
-    gap:56px;
+    gap:60px;
   }
   .home-photo{
-    flex:0 0 300px;
-    width:300px;
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 18px 40px rgba(0,33,69,0.16);
+    flex:0 0 400px;
+    width:400px;
   }
-  .home-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
-  .home-text{ flex:1 1 480px; min-width:0; }
-  .home-text .eyebrow{margin-bottom:14px;}
-  .home-text h1{
-    font-family:var(--serif);
-    font-size:clamp(1.7rem, 3.4vw, 2.3rem);
-    color:var(--ubc-blue);
-    margin:0 0 6px;
-    font-weight:600;
-    line-height:1.15;
-  }
-  .home-text .role{
-    color:var(--ink-soft);
-    font-size:0.98rem;
-    margin:0 0 18px;
-  }
+  .home-photo img{ width:100%; height:auto; display:block; }
+  .home-text{ flex:1 1 480px; min-width:0; padding-top:6px; }
   .home-text p{
-    font-size:0.92rem;
-    margin:0 0 12px;
+    font-size:1rem;
+    margin:0 0 22px;
     color:var(--ink);
-  }
-  .home-text .contact-line{
-    margin-top:16px;
-    font-size:0.92rem;
+    max-width:60ch;
   }
 
-  /* allow scrolling gracefully on small screens instead of clipping content */
-  @media (max-height:760px), (max-width:860px){
-    body{ height:auto; overflow:auto; }
+  @media (max-width:860px){
     main.home{
       flex-direction:column;
       align-items:flex-start;
-      padding:48px 32px 64px;
+      padding:40px 24px 64px;
+      gap:32px;
     }
-    .home-photo{ width:220px; flex-basis:220px; }
+    .home-photo{ width:100%; max-width:340px; flex-basis:auto; }
   }
 </style>
 </head>
@@ -82,13 +66,9 @@
 
 <main class="home">
   <div class="home-photo">
-    <img src="headshot_large.jpg" alt="Portrait of Tianyujun (Lucy) Lu">
+    <img src="headshot_editorial_v4.jpg" alt="Portrait of Tianyujun (Lucy) Lu">
   </div>
   <div class="home-text">
-    <p class="eyebrow">Job Market Candidate 2026&ndash;27</p>
-    <h1>Tianyujun (Lucy) Lu</h1>
-    <p class="role">PhD Candidate, Marketing &amp; Behavioural Science &middot; Sauder School of Business, University of British Columbia</p>
-
     <p>I am a PhD candidate in Marketing and Behavioural Science at the Sauder Business School, University of British Columbia. I am currently on the 2026&ndash;2027 job market.</p>
 
     <p>My research examines how consumers and decision-makers interpret EDI-related identity messages, representations, and signals in consumer, marketplace, and evaluative contexts. I study how brands, organizations, and individuals communicate about identity, inclusion, and social issues, and how these communications shape judgments of authenticity, motive, fairness, and moral character. I use a multi-method approach comprising online experiments, social media field data, online simulation, archival analysis, text analysis, scale development, and incentive-compatible choice designs. My overarching goal is to uncover the unintended consequences and hidden costs of EDI-related communications, and to provide insight into how such signals can be communicated and interpreted more carefully.</p>
