@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Research — Tianyujun (Lucy) Lu</title>
+<meta name="description" content="Publications, working papers, and research in progress by Tianyujun (Lucy) Lu, PhD Candidate at UBC Sauder School of Business.">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Research — Tianyujun (Lucy) Lu">
+<meta property="og:description" content="Publications, working papers, and research in progress by Tianyujun (Lucy) Lu, PhD Candidate at UBC Sauder School of Business.">
+<meta property="og:url" content="https://tianyujunlu.com/research.html">
+<meta property="og:image" content="https://tianyujunlu.com/headshot_editorial.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -23,7 +33,10 @@
     border-radius:12px;
     padding:20px 24px;
     margin-bottom:14px;
+    box-shadow:0 2px 10px rgba(0,33,69,0.05);
+    transition:box-shadow .2s ease;
   }
+  details.card:hover{ box-shadow:0 4px 16px rgba(0,33,69,0.09); }
   details.card[open]{ border-color:var(--ubc-blue-accent); }
   details.card summary{
     list-style:none;
@@ -54,25 +67,28 @@
     font-style:italic;
     margin:0 0 10px;
   }
-  .badges{ display:flex; flex-wrap:wrap; gap:8px; }
+  .badges{ display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
   .badge{
     display:inline-block;
-    font-size:0.82rem;
+    font-size:0.88rem;
     font-weight:600;
-    padding:6px 14px;
-    border-radius:8px;
-    border:1px solid var(--ubc-blue-accent);
+    font-style:italic;
     color:var(--ubc-blue-accent);
-    background:#fff;
   }
   .badge.gold{
-    border-color:var(--ubc-gold);
+    font-style:normal;
+    padding:6px 14px;
+    border-radius:8px;
+    border:1px solid var(--ubc-gold);
     background:rgba(253,185,19,0.16);
     color:#8a6400;
   }
   .badge.solid{
+    font-style:normal;
+    padding:6px 14px;
+    border-radius:8px;
     background:var(--ubc-blue);
-    border-color:var(--ubc-blue);
+    border:1px solid var(--ubc-blue);
     color:#fff;
   }
   .side{ display:flex; align-items:center; gap:10px; flex:0 0 auto; }
@@ -121,6 +137,7 @@
     background:#fff;
     position:relative;
     overflow:hidden;
+    box-shadow:0 4px 16px rgba(0,33,69,0.07);
   }
   .jmp-card::before{
     content:"";
@@ -270,18 +287,6 @@
     <div class="rgroup">
       <h2>Research in Progress</h2>
 
-       <details class="card">
-        <summary>
-          <div class="summary-main">
-            <h3>Brand Status and Cultural Appropriation</h3>
-            <p class="authors">Tianyujun Lu, Yann Cornil, and Aradhna Krishna</p>
-            <div class="badges"><span class="badge gold">Data collection in progress</span></div>
-          </div>
-          <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <div class="card-body">&nbsp;</div>
-      </details>
-      
       <details class="card">
         <summary>
           <div class="summary-main">
@@ -293,7 +298,18 @@
         </summary>
         <div class="card-body">&nbsp;</div>
       </details>
-      
+
+      <details class="card">
+        <summary>
+          <div class="summary-main">
+            <h3>Brand Status and Cultural Appropriation</h3>
+            <p class="authors">Tianyujun Lu, Yann Cornil, and Aradhna Krishna</p>
+            <div class="badges"><span class="badge gold">Data collection in progress</span></div>
+          </div>
+          <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="card-body">&nbsp;</div>
+      </details>
     </div>
 
     <hr class="rule">
