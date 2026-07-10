@@ -20,15 +20,29 @@
     gap:8px;
     margin-bottom:24px;
   }
-  .cv-frame{
-    width:100%;
-    height:1120px;
+  .cv-preview-link{
+    display:block;
     border:1px solid var(--rule);
     border-radius:12px;
+    overflow:hidden;
     background:#fff;
+    box-shadow:0 4px 16px rgba(0,33,69,0.08);
+    transition:box-shadow .2s ease, transform .2s ease;
   }
-  @media (max-width:720px){
-    .cv-frame{ height:760px; }
+  .cv-preview-link:hover{
+    box-shadow:0 8px 24px rgba(0,33,69,0.14);
+    transform:translateY(-2px);
+  }
+  .cv-preview-link img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+  .cv-preview-hint{
+    font-size:0.82rem;
+    color:var(--ink-soft);
+    margin:12px 0 0;
+    text-align:center;
   }
 </style>
 </head>
@@ -55,7 +69,10 @@
 
   <div class="cv-wrap" style="margin-top:36px;">
     <a class="btn gold cv-download" href="CV_Tianyujun_Lu.pdf" download>Download CV (PDF) &rarr;</a>
-    <iframe class="cv-frame" src="CV_Tianyujun_Lu.pdf" title="Tianyujun Lu CV"></iframe>
+    <a class="cv-preview-link" href="CV_Tianyujun_Lu.pdf" target="_blank" rel="noopener">
+      <img src="cv-preview.jpg" alt="Preview of Tianyujun Lu's CV, page 1">
+    </a>
+    <p class="cv-preview-hint">Click the preview to open the full CV (opens in a new tab)</p>
   </div>
 </main>
 
