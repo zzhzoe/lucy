@@ -1,0 +1,249 @@
+:root{
+  --ubc-blue: #002145;
+  --ubc-blue-accent: #0F5FA6;
+  --ubc-gold: #FDB913;
+  --paper: #FAF8F3;
+  --ink: #1C1C1E;
+  --ink-soft: #5B5D62;
+  --rule: #E1DBCD;
+  --serif: "Source Serif 4", Georgia, serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --maxw: 980px;
+}
+
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+a{color:var(--ubc-blue-accent); text-decoration:none;}
+a:hover{color:var(--ubc-blue); text-decoration:underline;}
+::selection{background:rgba(253,185,19,0.35);}
+
+/* ---------- NAV ---------- */
+.nav{
+  border-bottom:1px solid var(--rule);
+  background:var(--paper);
+}
+.nav-inner{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:22px 32px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:14px;
+}
+.nav-name{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:1.1rem;
+  color:var(--ubc-blue);
+}
+.nav-links{
+  display:flex;
+  gap:30px;
+  list-style:none;
+  margin:0; padding:0;
+}
+.nav-links a{
+  color:var(--ink-soft);
+  font-size:0.85rem;
+  font-weight:600;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  padding-bottom:4px;
+  border-bottom:2px solid transparent;
+}
+.nav-links a:hover{
+  color:var(--ubc-blue);
+  border-bottom-color:var(--ubc-gold);
+  text-decoration:none;
+}
+.nav-links a.active{
+  color:var(--ubc-blue);
+  border-bottom-color:var(--ubc-gold);
+}
+
+main{flex:1;}
+
+/* ---------- PAGE HEADER (for CV / Research / Teaching) ---------- */
+.page-head{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:56px 32px 0;
+}
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  font-size:0.76rem;
+  font-weight:700;
+  color:var(--ubc-blue-accent);
+  margin:0 0 12px;
+}
+.eyebrow::before{
+  content:"";
+  display:inline-block;
+  width:22px; height:2px;
+  background:var(--ubc-gold);
+  margin-right:10px;
+  vertical-align:middle;
+}
+.page-head h1{
+  font-family:var(--serif);
+  font-size:clamp(1.8rem, 4vw, 2.5rem);
+  color:var(--ubc-blue);
+  margin:0 0 8px;
+  font-weight:600;
+}
+.page-head .sub{
+  color:var(--ink-soft);
+  font-size:1rem;
+  max-width:60ch;
+  margin:0;
+}
+
+.content{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:36px 32px 80px;
+}
+
+hr.rule{border:none; border-top:1px solid var(--rule); margin:36px 0;}
+
+/* ---------- BUTTONS ---------- */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:11px 22px;
+  border-radius:999px;
+  font-size:0.88rem;
+  font-weight:600;
+  border:1px solid rgba(0,33,69,0.15);
+  color:var(--ubc-blue);
+  background:#fff;
+  transition:all .15s ease;
+}
+.btn:hover{
+  background:var(--ubc-blue);
+  color:#fff;
+  text-decoration:none;
+  transform:translateY(-1px);
+}
+.btn.gold{background:var(--ubc-gold); border-color:var(--ubc-gold); color:var(--ubc-blue);}
+.btn.gold:hover{background:#e5a80f; color:var(--ubc-blue);}
+.btn.solid{background:var(--ubc-blue); border-color:var(--ubc-blue); color:#fff;}
+.btn.solid:hover{background:#0C2D57;}
+
+/* ---------- JOB MARKET PAPER ---------- */
+.jmp{
+  background:#fff;
+  border:1px solid rgba(0,33,69,0.12);
+  border-radius:16px;
+  padding:32px;
+  position:relative;
+  overflow:hidden;
+  margin-bottom:8px;
+}
+.jmp::before{
+  content:"";
+  position:absolute; top:0; left:0; bottom:0; width:5px;
+  background:linear-gradient(180deg, var(--ubc-gold), var(--ubc-blue-accent));
+}
+.jmp-tag{
+  display:inline-block;
+  font-size:0.72rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--ubc-blue);
+  background:rgba(253,185,19,0.28);
+  padding:4px 10px; border-radius:6px;
+  margin-bottom:14px;
+}
+.jmp h3{
+  font-family:var(--serif); font-size:1.35rem; color:var(--ubc-blue);
+  margin:0 0 8px; line-height:1.3;
+}
+.jmp .authors{font-size:0.92rem; color:var(--ink-soft); margin:0 0 4px;}
+.jmp .status{font-size:0.86rem; color:var(--ubc-blue-accent); font-weight:600; margin:0 0 16px;}
+.jmp p.abstract{font-size:0.96rem; margin:0 0 18px;}
+
+/* ---------- PUBLICATION LIST ---------- */
+.pub{
+  padding:18px 0;
+  border-bottom:1px solid var(--rule);
+  display:flex; gap:16px; align-items:flex-start;
+}
+.pub:last-child{border-bottom:none;}
+.pub-idx{
+  font-family:var(--serif); font-size:0.85rem; color:var(--rule);
+  font-weight:700; flex:0 0 24px; padding-top:2px;
+}
+.pub-body p{margin:0 0 6px; font-size:0.94rem;}
+.pub-title{font-weight:600; color:var(--ink);}
+.status-tag{
+  display:inline-block; font-size:0.71rem; font-weight:700; letter-spacing:0.03em;
+  text-transform:uppercase; padding:3px 9px; border-radius:5px;
+  background:rgba(15,95,166,0.09); color:var(--ubc-blue-accent);
+}
+.status-tag.published{background:rgba(15,95,166,0.14); color:var(--ubc-blue);}
+
+/* ---------- TWO COLUMN ---------- */
+.two-col{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+.two-col h2.sec{
+  font-family:var(--serif); font-size:1.1rem; color:var(--ubc-blue); margin:0 0 14px;
+}
+ul.plain{list-style:none; margin:0; padding:0;}
+ul.plain li{font-size:0.92rem; padding:9px 0; border-bottom:1px solid var(--rule); color:var(--ink);}
+ul.plain li:last-child{border-bottom:none;}
+ul.plain li .yr{display:block; font-size:0.78rem; color:var(--ink-soft); margin-top:2px;}
+
+/* ---------- TEACHING ---------- */
+.teach-card{
+  background:#fff; border:1px solid rgba(0,33,69,0.12); border-radius:12px;
+  padding:26px 28px; max-width:560px;
+}
+.teach-card h3{font-family:var(--serif); color:var(--ubc-blue); margin:0 0 6px; font-size:1.15rem;}
+.eval{display:flex; align-items:center; gap:10px; margin-top:16px; font-size:0.88rem; color:var(--ubc-blue-accent); font-weight:600;}
+.eval .bar{width:130px; height:6px; background:var(--rule); border-radius:4px; overflow:hidden;}
+.eval .fill{height:100%; background:var(--ubc-gold); width:94%;}
+
+/* ---------- CV PAGE ---------- */
+.cv-embed{
+  width:100%;
+  aspect-ratio: 8.5 / 11;
+  border:1px solid var(--rule);
+  border-radius:12px;
+  background:#fff;
+  margin-top:24px;
+}
+.cv-list{margin:0; padding:0; list-style:none;}
+.cv-list li{padding:10px 0; border-bottom:1px solid var(--rule); font-size:0.94rem;}
+.cv-list li:last-child{border-bottom:none;}
+
+footer{
+  text-align:center;
+  padding:24px 32px 36px;
+  font-size:0.78rem;
+  color:var(--ink-soft);
+  border-top:1px solid var(--rule);
+}
+
+.note{
+  font-size:0.8rem; color:var(--ink-soft);
+  background:rgba(15,95,166,0.06);
+  border:1px dashed rgba(0,33,69,0.15);
+  border-radius:8px; padding:10px 14px; margin-top:14px;
+}
+
+@media (max-width:720px){
+  .two-col{grid-template-columns:1fr;}
+}
