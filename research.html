@@ -67,30 +67,27 @@
     font-style:italic;
     margin:0 0 10px;
   }
-  .badges{ display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
-  .badge{
-    display:inline-block;
-    font-size:0.88rem;
-    font-weight:600;
-    font-style:italic;
-    color:var(--ubc-blue-accent);
-  }
-  .badge.gold{
-    font-style:normal;
-    padding:6px 14px;
-    border-radius:8px;
-    border:1px solid var(--ubc-gold);
-    background:rgba(253,185,19,0.16);
-    color:#8a6400;
-  }
-  .badge.solid{
-    font-style:normal;
-    padding:6px 14px;
-    border-radius:8px;
-    background:var(--ubc-blue);
-    border:1px solid var(--ubc-blue);
-    color:#fff;
-  }
+.badges{ display:flex; flex-wrap:wrap; gap:8px; }
+.badge{
+  display:inline-block;
+  font-size:0.82rem;
+  font-weight:600;
+  padding:6px 14px;
+  border-radius:8px;
+  border:1px solid var(--ubc-blue-accent);
+  color:var(--ubc-blue-accent);
+  background:#fff;
+}
+.badge.gold{
+  border-color:var(--ubc-gold);
+  background:rgba(253,185,19,0.16);
+  color:#8a6400;
+}
+.badge.solid{
+  background:var(--ubc-blue);
+  border-color:var(--ubc-blue);
+  color:#fff;
+}
   .side{ display:flex; align-items:center; gap:10px; flex:0 0 auto; }
   .yr-badge{
     background:var(--ubc-blue);
